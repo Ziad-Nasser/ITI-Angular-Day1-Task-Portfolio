@@ -1,13 +1,27 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { HeroComponent } from './Components//hero/hero.component';
+import { AboutComponent } from './Components//about/about.component';
+import { SkillsComponent } from './Components//skills/skills.component';
+import { PortfolioComponent } from './Components/portfolio/portfolio.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    NavbarComponent,
+    CommonModule,
+    HeroComponent,
+    AboutComponent,
+    SkillsComponent,
+    PortfolioComponent,
+    FooterComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Day1-Task';
+  title = 'Your Portfolio App';
 }
